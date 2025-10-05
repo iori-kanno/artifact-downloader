@@ -1,0 +1,40 @@
+# Source files
+src/
+*.ts
+!*.d.ts
+
+# Config files
+tsconfig.json
+.eslintrc.js
+.prettierrc
+jest.config.js
+
+# Test files
+**/__tests__/
+*.test.*
+*.spec.*
+
+# Development files
+.env*
+!.env.example
+config.json
+config.local.json
+.artifact-downloader/
+
+# Git files
+.git/
+.gitignore
+
+# Editor files
+.vscode/
+.idea/
+
+# Example files
+config.example.json
+pre-survey-*.md
+
+# Build artifacts
+*.tsbuildinfo
+
+# OS files
+.DS_Store

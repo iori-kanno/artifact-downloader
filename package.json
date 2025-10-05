@@ -1,0 +1,85 @@
+{
+  "name": "artifacts-cli",
+  "version": "1.0.0",
+  "description": "CLI tool to download artifacts from Xcode Cloud and Firebase App Distribution",
+  "type": "module",
+  "main": "dist/cli/index.js",
+  "bin": {
+    "artifacts-cli": "./dist/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "chmod +x dist/cli/*.js",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
+    "test:watch": "NODE_OPTIONS='--experimental-vm-modules' jest --watch",
+    "test:coverage": "NODE_OPTIONS='--experimental-vm-modules' jest --coverage",
+    "prepublishOnly": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "cli",
+    "xcode-cloud",
+    "firebase",
+    "app-distribution",
+    "artifact",
+    "download",
+    "ios",
+    "android"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iori-kanno/artifacts-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iori-kanno/artifacts-cli/issues"
+  },
+  "homepage": "https://github.com/iori-kanno/artifacts-cli#readme",
+  "author": "",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "chalk": "^4.1.2",
+    "cli-table3": "^0.6.3",
+    "commander": "^11.1.0",
+    "dotenv": "^16.3.1",
+    "form-data": "^4.0.0",
+    "fs-extra": "^11.2.0",
+    "google-auth-library": "^9.4.1",
+    "inquirer": "^12.9.6",
+    "jsonwebtoken": "^9.0.2",
+    "ora": "^5.4.1",
+    "semver": "^7.5.4"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.9",
+    "@types/jest": "^29.5.10",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/node": "^20.10.3",
+    "@types/semver": "^7.5.6",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.55.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.1.0",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

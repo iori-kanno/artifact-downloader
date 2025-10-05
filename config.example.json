@@ -1,0 +1,11 @@
+{
+  "appStoreConnect": {
+    "keyId": "YOUR_KEY_ID",
+    "issuerId": "YOUR_ISSUER_ID",
+    "privateKeyPath": "/path/to/AuthKey_YOUR_KEY_ID.p8"
+  },
+  "firebase": {
+    "projectId": "your-project-id",
+    "serviceAccountPath": "/path/to/service-account.json"
+  }
+}
